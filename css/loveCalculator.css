@@ -1,0 +1,258 @@
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ballet&family=Montserrat:wght@500&display=swap');
+     :root {
+        --clr-purple-10: hsl(327, 55%, 33%);
+        --clr-purple-8: rgb(180, 65, 128);
+        --clr-purple-6: hsl(327, 68%, 65%);
+        --clr-purple-4: hsl(327, 86%, 80%);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 1em;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body::-webkit-scrollbar {
+        width: 0.25rem;
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: white;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: var(--clr-purple-10);
+    }
+    
+    .menu-logo {
+        display: none;
+        text-decoration: none;
+    }
+    
+    nav {
+        height: 75px;
+        background: var(--clr-purple-8);
+    }
+    
+    .logo {
+        color: black;
+        font-family: 'Pacifico', cursive;
+        font-size: 3rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin: 0 10px;
+        text-decoration: none;
+        /* margin-right: auto; */
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        text-decoration: none;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .nav-links .menu-contents {
+        text-decoration: none;
+        font-family: 'montserrat', sans-serif;
+        color: white;
+        font-weight: 700;
+        padding: 0 20px;
+        font-size: 1.2rem;
+    }
+    
+    .nav-links li:first-child {
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    
+    .nav-links .menu-contents {
+        margin-left: auto;
+    }
+    
+    #top-container {
+        background: linear-gradient(to right top, rgba(248, 160, 208, 0.7), rgba(253, 198, 228, 0.3));
+        padding-bottom: 1rem;
+        box-shadow: 1px 1px 20px var(--clr-purple-10);
+    }
+    
+    #top-container h1 {
+        text-align: center;
+        font-family: 'Pacifico', cursive;
+        font-size: 4rem;
+        font-weight: 200;
+        color: var(--clr-purple-10);
+    }
+    
+    .subheading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    #names {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+    
+    .inc1 {
+        font-weight: bold;
+        margin: 6rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 25px;
+        background: linear-gradient(to right top, rgba(255, 175, 219, 0.7), rgba(255, 175, 219, 0.2));
+        box-shadow: 1px 1px 10px var(--clr-purple-10);
+    }
+    
+    .inc2 {
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+    
+    input {
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px 0px;
+    }
+    
+    .result a,
+    .clear a {
+        border: 1px solid black;
+        text-decoration: none;
+        color: white;
+        background: var(--clr-purple-10);
+        padding: 12px 15px;
+        border-radius: 25px;
+        box-shadow: 1px 1px 10px var(--clr-purple-10);
+    }
+    
+    .clear {
+        margin-top: 2rem;
+    }
+    
+    .clear,
+    .result {
+        text-align: center;
+    }
+    
+    .result a:hover {
+        background: var(--clr-purple-4);
+        color: black;
+    }
+    
+    .clear a:hover {
+        background: var(--clr-purple-4);
+        color: black;
+    }
+    
+    .answer {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .footer {
+        display: absolute;
+        justify-content: center;
+        font-size: 1rem;
+        text-align: center;
+        align-self: flex-end;
+        bottom: 10%;
+        margin-top: 4rem;
+        margin-bottom: 0;
+    }
+    
+    @media screen and (max-width:768px) {
+        body {
+            font-size: 1.5rem;
+        }
+        nav {
+            position: relative;
+        }
+        .logo {
+            display: none;
+        }
+        .menu-logo {
+            display: inline-block;
+            color: black;
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+        .line {
+            width: 30px;
+            height: 3px;
+            margin: 5px;
+            background: black;
+        }
+        .hamburger {
+            position: absolute;
+            top: 50%;
+            right: 7%;
+            transform: translate(-5%, -50%);
+            z-index: 2;
+            cursor: pointer;
+        }
+        .nav-links {
+            background: var(--clr-purple-6);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 25vh;
+            clip-path: circle(100px at 100% -100%);
+            -webkit-clip-path: circle(100px at 100% -100%);
+            transition: all 0.25s ease-out;
+            pointer-events: none;
+        }
+        .nav-links.open {
+            clip-path: circle(700px at 90% -70%);
+            -webkit-clip-path: circle(700px at 90% -70%);
+            pointer-events: all;
+        }
+        #names {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+        #top-container h1 {
+            font-size: 2.5rem;
+        }
+        .inc1 {
+            border: 1px solid black;
+            margin: 1rem;
+            font-size: 1.5rem;
+            padding: 1rem;
+            border-radius: 25px;
+        }
+        .inc2 {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .result,
+        .clear {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        footer {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }

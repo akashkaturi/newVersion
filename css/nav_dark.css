@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ballet&family=Montserrat:wght@500&display=swap');
+
+.logo {
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-size: 3rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 10px;
+    text-decoration: none;
+    /* margin-right: auto; */
+}
+
+.menu-logo {
+    display: none;
+}
+
+nav {
+    height: 10vh;
+    background-color: grey;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.nav-links .menu-contents {
+    text-decoration: none;
+    font-family: "montserrat", sans-serif;
+    color: white;
+    font-weight: 700;
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+.nav-links li:first-child {
+    margin-right: auto;
+    margin-left: 20px;
+}
+@media screen and (max-width:768px) {
+        body {
+            font-size: 1.5rem;
+        }
+        nav {
+            z-index: 1;
+            position: relative;
+        }
+        .logo {
+            display: none;
+        }
+        .menu-logo {
+            display: inline-block;
+            color: white;
+            font-family: 'Pacifico',cursive;
+            font-size: 2.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+        .line {
+            width: 30px;
+            height: 3px;
+            margin: 5px;
+            background: white;
+        }
+        .hamburger {
+            position: absolute;
+            top: 50%;
+            right: 7%;
+            transform: translate(-5%, -50%);
+            z-index: 2;
+            cursor: pointer;
+        }
+        .nav-links {
+            background: white;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 25vh;
+            clip-path: circle(100px at 100% -100%);
+            -webkit-clip-path: circle(100px at 100% -100%);
+            transition: all 0.25s ease-out;
+            pointer-events: none;
+        }
+        .nav-links .menu-contents{
+            color: black;
+        }
+        .nav-links.open {
+            clip-path: circle(700px at 90% -70%);
+            -webkit-clip-path: circle(700px at 90% -70%);
+            pointer-events: all;
+        }
+    }

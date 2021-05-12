@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="favicon.ico" />
+        <link rel="stylesheet" href="css/days.css" />
+        <link rel="stylesheet" href="css/nav_dark.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+        <title>Born Date</title>
+    </head>
+    <body>
+        <nav>
+            <a class="menu-logo" href="#">Ak</a>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <ul class="nav-links">
+                <li>
+                    <a class="logo" href="#">Ak</a>
+                </li>
+                <li>
+                    <a class="menu-contents" href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a class="menu-contents" href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a class="menu-contents" href="loveCalculator.html">LOVE CALCULATOR</a>
+                </li>
+                <li>
+                    <a class="menu-contents" href="days.html">DURATION FROM ARRIVAL</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="top">
+            <div class="user_input">
+                <div class="input">
+                    <h2>Your Birth Date</h2>
+                    <input type="text" id="date" name="d" placeholder="Date" />
+                </div>
+
+                <div class="input">
+                    <h2>Your Birth Month</h2>
+                    <input list="browsers" name="m" placeholder="Month" id="month" />
+                    <datalist id="browsers">
+                        <option value="January"></option>
+                        <option value="February"></option>
+                        <option value="March"></option>
+                        <option value="April"></option>
+                        <option value="May"></option>
+                        <option value="June"></option>
+                        <option value="July"></option>
+                        <option value="August"></option>
+                        <option value="September"></option>
+                        <option value="October"></option>
+                        <option value="November"></option>
+                        <option value="December"></option>
+                    </datalist>
+                </div>
+                <div class="input">
+                    <h2>Your Birth Year</h2>
+                    <input type="text" id="year" placeholder="Year" />
+                </div>
+                <div class="submit_class">
+                    <a href="#" class="submit_button">Start the count</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pseudotop">
+            <div class="head">
+                <h2>You've been on this earth's atmosphere for</h2>
+            </div>
+            <div class="d_year">
+                <h1>Year</h1>
+                <p>Years</p>
+            </div>
+            <div class="d_months">
+                <h1>Months</h1>
+                <p>Months</p>
+            </div>
+            <div class="d_days">
+                <h1>Days</h1>
+                <p>Days</p>
+            </div>
+            <div class="d_hours">
+                <h1>Hours</h1>
+                <p>Hours</p>
+            </div>
+            <div class="d_minutes">
+                <h1>Minutes</h1>
+                <p>Minutes</p>
+            </div>
+            <div class="d_seconds">
+                <h1>Secs</h1>
+                <p>Seconds</p>
+            </div>
+            <div class="reset">
+                <a href="days.html"><h1>Reset</h1></a>
+            </div>
+        </section>
+
+        <script src="javaScript/new.js"></script>
+        <script src="javaScript/date.js"></script>
+    </body>
+</html>
