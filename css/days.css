@@ -12,7 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    max-height: 8vh;
+    height: 128px;
 }
 .nav ul {
     list-style: none;
@@ -34,12 +34,14 @@ body {
 
 @media screen and (max-width: 768px) {
     #top {
-        height: 60vh;
+        
+        height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: black;
         text-align: center;
+        font-size: 1.3rem;
         /* display: none; */
     }
     input {
@@ -57,7 +59,7 @@ body {
         margin-top: 40px;
         text-decoration: none;
         text-align: center;
-        border: 5px solid grey;
+        border: 3px solid red;
         border-radius: 25px;
         background: white;
         color: black;
@@ -73,7 +75,7 @@ body {
     #pseudotop{
         display: none;
         grid-template-columns:50% 50%;
-        height: 60vh;
+        height: 80vh;
         justify-content: center;
         align-items: center;
         grid-row-gap: 2rem;
@@ -87,9 +89,9 @@ body {
         padding: 1rem 0.5rem;
         background-color: grey;
         color:black;
-        margin: 0.5rem 3rem;
+        margin: 0.5rem 2.6rem;
         border-radius:10px;
-        box-shadow: 1px 1px 5px white;
+        box-shadow: 1px 1px 10px white;
     }
     #pseudotop a{
         text-decoration: none;
