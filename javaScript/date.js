@@ -45,7 +45,7 @@ function duration(){
 };
 setInterval(duration,1000);
 function calculate(){
-        document.querySelector('#top').style.display='none';
+        document.querySelector('.user_input').style.display='none';
         document.querySelector('#pseudotop').style.display='grid';
         duration();
 };
