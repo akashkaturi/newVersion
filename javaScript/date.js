@@ -1,5 +1,16 @@
 document.querySelector(".submit_class").addEventListener('click',calculate);
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
 
+function generaterandomnumber() {
+    return Math.floor(Math.random() * hex.length);
+}
+
+function change() {
+    let hexColor = '#';
+    for (let i = 0; i < 6; i++) hexColor += hex[generaterandomnumber()];
+    // document.querySelector('.color').innerHTML = hexColor;
+    document.querySelector('#pseudotop').style.backgroundColor = hexColor;
+}
 function duration(){
 
     var year= document.querySelector('#year').value;
@@ -42,10 +53,17 @@ function duration(){
     document.querySelector('.d_hours h1').innerHTML=texthour;
     document.querySelector('.d_minutes h1').innerHTML=textminute;
     document.querySelector('.d_seconds h1').innerHTML=textsecond;
+    
 };
 setInterval(duration,1000);
+setInterval(change, 1000);
+
 function calculate(){
+        
         document.querySelector('.user_input').style.display='none';
         document.querySelector('#pseudotop').style.display='grid';
         duration();
+        change();
+
+        
 };
